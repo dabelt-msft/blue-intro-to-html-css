@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Whose Clues?</title>
+    <style media="screen">
+      body {
+        background-color: #fbfbfb;
+      }
+      td, th {
+        padding: 5px;
+      }
+      #image {
+        display: none;
+        float: right;
+      }
+      .data {
+        width: 49%;
+        border-left: 2px lightgray solid;
+      }
+      .align-left {
+        text-align: left;
+      }
+      .gray {
+        background-color: lightgray;
+      }
+      .totally {
+        color: red;
+        font-weight: 600;
+        text-decoration: overline;
+      }
+
+      #hipster-header {
+        /*background-color: white;*/
+
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 1px 0px 1px #bfbfbf;
+      }
+
+      #hipster-header:hover {
+        background-image: url('img/Blue.png');
+      }
+
+      #clue {
+        background-color: #62c3f0;
+        width: 100px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px #0a6b98;
+        margin: 20px;
+      }
+      #homework {
+        display:none;
+      }
+
+    </style>
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <div id="hipster-header">
+        <h1>Coders Anonymous</h1>
+        <h3>How to be a productive addict in 3.14... easy steps</h3>
+    </div>
+
+    <div id="image">
+      <h1>Blues Clues!!!</h1>
+      <img src="img/Blue.png" alt="Blues Clues">
+    </div>
+
+    <h2>But first, a guessing game</h2>
+    <ul>
+      <h4>I spy... something</h3>
+      <li>Blue</li>
+      <li>Spotted</li>
+      <li>Furry</li>
+    </ul>
+    <div id="clue">
+
+      Clue?
+    </div>
+
+    <table>
+    <tr class="gray">
+      <th class="align-left">Step</th>
+      <th class="data">Description</th>
+      <th class="data">Example</th>
+    </tr>
+    <tr>
+      <td class="align-left">1.00.</td>
+      <td class="data"><strong>Become friends</strong> with Google. </td>
+      <td class="data">Example: "shadow css" will yield "Box-shadow"</td>
+    </tr>
+    <tr class="gray">
+      <td class="align-left">2.00.</td>
+      <td class="data">If stuck, <strong>move forward</strong> and then review. Don't wait to master everything before moving foward. <em>There is plenty of time for review.</em></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="align-left">3.00.</td>
+      <td class="data">Build miniature projects!</td>
+      <td class="data">Mini portofilio, an about me page, little by little adding more complexity and things learned</td>
+    </tr>
+    <tr class="gray">
+      <td class="align-left">3.14.</td>
+      <td class="data">Repeat</td>
+      <td>Go to step 1</td>
+    </tr>
+    </table>
+
+    <p>Portland tumblr dreamcatcher bushwick, mumblecore pour-over sriracha air plant godard pop-up authentic jean shorts ramps aesthetic. Portland aesthetic yuccie cliche gochujang. Letterpress cred taxidermy jianbing. Kale chips small batch knausgaard, art party church-key biodiesel poutine etsy cray. Actually tilde vexillologist <span class="totally">gastropub</span> fam godard chillwave dreamcatcher helvetica ramps. Tacos fam authentic 3 wolf moon, health goth skateboard <span class="totally">helvetica</span> fap pok pok green juice vinyl hexagon polaroid. Art party occupy edison bulb, microdosing messenger bag synth flannel shoreditch af.</p>
+
+    <p>Four loko master cleanse fap, deep v plaid bushwick XOXO YOLO blog. Quinoa deep v poutine food truck, twee pitchfork locavore retro neutra XOXO wolf. Mumblecore <span class="totally">flannel literally vegan</span>, hoodie crucifix raw denim craft beer unicorn try-hard vice four dollar toast actually. Gluten-free typewriter irony street art scenester austin copper mug cliche hell of pok pok edison bulb, yuccie migas celiac farm-to-table. Forage squid tacos <span class="totally">VHS</span> organic literally, keffiyeh la croix taxidermy hot chicken tumeric snackwave actually. Iceland kale chips snackwave gluten-free heirloom. Sartorial bicycle rights succulents chicharrones four loko everyday carry.</p>
+
+
+    <h2 id="homework-header">Homework</h2>
+    <ul id="homework">
+      <li>Create a web page about yourself</li>
+      <li>Add some paragraphs with some strong, em, and custom styled spans</li>
+      <li>Include an ordered and unordered list</li>
+      <li>Style the page to your liking, with background color, and an image.</li>
+      <li>Use a pseudo selector like #item-id:hover to hide or show a treasure map to Castros hidden treasures.</li>
+      <li>Extra Credit: Use Jquery to get an element to hide or show on click</li>
+    </ul>
+
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#clue').on('click', function(){
+          $('#image').toggle();
+        });
+        $('h2#homework-header').on('click', function(){
+          $('#homework').show();
+          $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+        })
+
+      })
+    </script>
+  </body>
+</html>
